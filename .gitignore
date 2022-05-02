@@ -1,2 +1,6 @@
 .virtualenv
-.idea
+.venv
+*/.ipynb_checkpoints
+notebooks
+pjd-hosting-terraform.json
+.terraform
