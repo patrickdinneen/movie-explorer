@@ -16,8 +16,7 @@ def _get_credentials(service_account_info, target_audience):
 
 
 def _get_service_account_info() -> Dict[str, str]:
-    service_account_info_string = os.getenv("GCP_SERVICE_ACCOUNT") or st.secrets["GCP_SERVICE_ACCOUNT"]
-    return json.loads(service_account_info_string)
+    return st.secrets["gcp_service_account"]
 
 
 def _get_auth_headers(audience) -> Dict[str, str]:
