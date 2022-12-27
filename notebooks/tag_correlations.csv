@@ -1,0 +1,183 @@
+lhs_tag,rhs_tag,correlation
+007,007 (series),0.9847360602089923
+007,bond,0.8576589022993233
+007,james bond,0.9789409574726261
+007 (series),007,0.9847360602089923
+007 (series),bond,0.8519486411166511
+007 (series),james bond,0.9819555456482666
+adapted from:comic,based on comic,0.8022906599542425
+adapted from:comic,comic book,0.8187779599699209
+adapted from:comic,superhero,0.8118584169593799
+alien,aliens,0.9342320218347511
+alien,space,0.8129445109474734
+alien invasion,aliens,0.8483174963509481
+aliens,alien,0.9342320218347511
+aliens,alien invasion,0.8483174963509481
+aliens,space,0.8677171086883283
+animated,animation,0.8486251081553485
+animation,animated,0.8486251081553485
+animation,cartoon,0.8046346411745936
+author:alan moore,based on comic,0.8147370356538375
+author:alan moore,comic book adaption,0.8200728795108313
+author:alan moore,comics,0.8068234446623955
+author:alan moore,dc comics,0.8848177013734501
+bad plot,bad script,0.8182124590615045
+bad script,bad plot,0.8182124590615045
+based on comic,adapted from:comic,0.8022906599542425
+based on comic,author:alan moore,0.8147370356538375
+based on comic,comic book,0.8102809992280338
+based on comic,comic book adaption,0.9151219899508297
+based on comic,comics,0.897815195136018
+based on comic,dc comics,0.8010650566913303
+based on comic,super-hero,0.8781642994854858
+based on comic,superhero,0.8552620055323441
+batman,dc comics,0.8952320589631143
+biblical,christianity,0.8078405277053534
+big budget,special effects,0.8006845202250276
+bond,007,0.8576589022993233
+bond,007 (series),0.8519486411166511
+bond,james bond,0.9009340923222313
+cartoon,animation,0.8046346411745936
+cartoon,talking animals,0.8324747338252136
+chick flick,girlie movie,0.8018829572382385
+chick flick,good romantic comedies,0.8143073067801183
+chick flick,romantic comedy,0.8116486439615737
+christian,religion,0.8191308421502969
+christianity,biblical,0.8078405277053534
+comedy,funny,0.8344784979717361
+comic book,adapted from:comic,0.8187779599699209
+comic book,based on comic,0.8102809992280338
+comic book,super hero,0.8232123712026106
+comic book,superhero,0.8059012936812672
+comic book adaption,author:alan moore,0.8200728795108313
+comic book adaption,based on comic,0.9151219899508297
+comic book adaption,comics,0.9159989192630691
+comic book adaption,dc comics,0.8131682839257952
+comic book adaption,super-hero,0.8634971478728308
+comics,author:alan moore,0.8068234446623955
+comics,based on comic,0.897815195136018
+comics,comic book adaption,0.9159989192630691
+comics,super-hero,0.8477050217579377
+criterion,golden palm,0.832073032114019
+cult classic,cult film,0.8104395054082437
+cult film,cult classic,0.8104395054082437
+dark comedy,dark humor,0.8789602986304391
+dark humor,dark comedy,0.8789602986304391
+dc comics,author:alan moore,0.8848177013734501
+dc comics,based on comic,0.8010650566913303
+dc comics,batman,0.8952320589631143
+dc comics,comic book adaption,0.8131682839257952
+dog,dogs,0.8202187242405962
+dogs,dog,0.8202187242405962
+emma watson,harry potter,0.9756335238515123
+espionage,spy,0.8414304868551348
+excellent script,good acting,0.8404299198313328
+excellent script,great acting,0.8004730000142115
+excellent script,powerful ending,0.8125070527680954
+exceptional acting,great acting,0.8418310797135188
+exceptional acting,oscar (best directing),0.8100554572035722
+exceptional acting,oscar (best supporting actor),0.8310239844873882
+feel good movie,feel-good,0.8336576735078005
+feel-good,feel good movie,0.8336576735078005
+funny,comedy,0.8344784979717361
+girlie movie,chick flick,0.8018829572382385
+golden palm,criterion,0.832073032114019
+good acting,excellent script,0.8404299198313328
+good acting,great acting,0.8205330587773327
+good romantic comedies,chick flick,0.8143073067801183
+gore,gory,0.8337498249444966
+gore,splatter,0.8167902940358523
+gory,gore,0.8337498249444966
+great acting,excellent script,0.8004730000142115
+great acting,exceptional acting,0.8418310797135188
+great acting,good acting,0.8205330587773327
+great acting,oscar (best supporting actor),0.8033313650265343
+great acting,powerful ending,0.8373533774405928
+harry potter,emma watson,0.9756335238515123
+high school,teen movie,0.8168326479775466
+hilarious,very funny,0.8401883581508299
+history,us history,0.8145230782768791
+horror,scary,0.8276671636148344
+imdb top 250,oscar (best directing),0.8024902121839558
+iraq,iraq war,0.9242833399769584
+iraq war,iraq,0.9242833399769584
+james bond,007,0.9789409574726261
+james bond,007 (series),0.9819555456482666
+james bond,bond,0.9009340923222313
+kids and family,talking animals,0.8003220390905763
+music,musicians,0.8178518653116039
+musicians,music,0.8178518653116039
+nazis,world war ii,0.840862707172564
+nudity (full frontal - notable),nudity (full frontal),0.849050140153451
+nudity (full frontal),nudity (full frontal - notable),0.849050140153451
+oscar (best actor),oscar (best picture),0.912828717282116
+oscar (best actress),oscar (best directing),0.8047948563577584
+oscar (best cinematography),oscar (best directing),0.8107022594662205
+oscar (best directing),exceptional acting,0.8100554572035722
+oscar (best directing),imdb top 250,0.8024902121839558
+oscar (best directing),oscar (best actress),0.8047948563577584
+oscar (best directing),oscar (best cinematography),0.8107022594662205
+oscar (best directing),oscar (best picture),0.8153748486521117
+oscar (best directing),oscar (best supporting actor),0.9160650147517031
+oscar (best directing),oscar (best supporting actress),0.8087023149820929
+oscar (best picture),oscar (best actor),0.912828717282116
+oscar (best picture),oscar (best directing),0.8153748486521117
+oscar (best picture),oscar winner,0.8262633644423876
+oscar (best supporting actor),exceptional acting,0.8310239844873882
+oscar (best supporting actor),great acting,0.8033313650265343
+oscar (best supporting actor),oscar (best directing),0.9160650147517031
+oscar (best supporting actress),oscar (best directing),0.8087023149820929
+oscar winner,oscar (best picture),0.8262633644423876
+post apocalyptic,post-apocalyptic,0.8591019836292333
+post-apocalyptic,post apocalyptic,0.8591019836292333
+powerful ending,excellent script,0.8125070527680954
+powerful ending,great acting,0.8373533774405928
+powerful ending,thought-provoking,0.8125445139288314
+religion,christian,0.8191308421502969
+robot,robots,0.8567619208050029
+robots,robot,0.8567619208050029
+romantic comedy,chick flick,0.8116486439615737
+scary,horror,0.8276671636148344
+sci fi,sci-fi,0.8564317948341539
+sci fi,scifi,0.8922719824168417
+sci-fi,sci fi,0.8564317948341539
+sci-fi,scifi,0.9058334760545039
+scifi,sci fi,0.8922719824168417
+scifi,sci-fi,0.9058334760545039
+secret service,spies,0.8024127429649519
+secret service,spy,0.8124306243476374
+space,alien,0.8129445109474734
+space,aliens,0.8677171086883283
+special effects,big budget,0.8006845202250276
+spies,secret service,0.8024127429649519
+spies,spy,0.8192182399589989
+splatter,gore,0.8167902940358523
+spy,espionage,0.8414304868551348
+spy,secret service,0.8124306243476374
+spy,spies,0.8192182399589989
+super hero,comic book,0.8232123712026106
+super hero,super-hero,0.8928030625350182
+super hero,superhero,0.9503297898831116
+super-hero,based on comic,0.8781642994854858
+super-hero,comic book adaption,0.8634971478728308
+super-hero,comics,0.8477050217579377
+super-hero,super hero,0.8928030625350182
+super-hero,superhero,0.9238038486402886
+superhero,adapted from:comic,0.8118584169593799
+superhero,based on comic,0.8552620055323441
+superhero,comic book,0.8059012936812672
+superhero,super hero,0.9503297898831116
+superhero,super-hero,0.9238038486402886
+talking animals,cartoon,0.8324747338252136
+talking animals,kids and family,0.8003220390905763
+teen,teen movie,0.8780068878483469
+teen movie,high school,0.8168326479775466
+teen movie,teen,0.8780068878483469
+thought-provoking,powerful ending,0.8125445139288314
+us history,history,0.8145230782768791
+vampire,vampires,0.9637294027217014
+vampires,vampire,0.9637294027217014
+very funny,hilarious,0.8401883581508299
+world war ii,nazis,0.840862707172564
+world war ii,wwii,0.8512624590263542
+wwii,world war ii,0.8512624590263542

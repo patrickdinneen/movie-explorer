@@ -1,7 +1,6 @@
 .virtualenv
 .venv
 */.ipynb_checkpoints
-notebooks
 pjd-hosting-terraform.json
 .terraform
 .streamlit/secrets.toml
