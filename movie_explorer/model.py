@@ -37,6 +37,8 @@ class Movie:
                      directed_by=d["directed_by"])
 
 
+# TODO: Batched export/import from BigQuery FML (500 at a time)
+
 @dataclass
 class MovieSimilarity:
     movie: Movie
