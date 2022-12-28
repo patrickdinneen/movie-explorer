@@ -4,5 +4,4 @@
 pjd-hosting-terraform.json
 .terraform
 .streamlit/secrets.toml
-data/
 __pycache__/
