@@ -5,3 +5,4 @@ pjd-hosting-terraform.json
 .terraform
 .streamlit/secrets.toml
 __pycache__/
+venv

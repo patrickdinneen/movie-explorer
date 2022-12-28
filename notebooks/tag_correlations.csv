@@ -1,183 +1,625 @@
 lhs_tag,rhs_tag,correlation
-007,007 (series),0.9847360602089923
-007,bond,0.8576589022993233
-007,james bond,0.9789409574726261
-007 (series),007,0.9847360602089923
-007 (series),bond,0.8519486411166511
-007 (series),james bond,0.9819555456482666
-adapted from:comic,based on comic,0.8022906599542425
-adapted from:comic,comic book,0.8187779599699209
-adapted from:comic,superhero,0.8118584169593799
-alien,aliens,0.9342320218347511
-alien,space,0.8129445109474734
-alien invasion,aliens,0.8483174963509481
-aliens,alien,0.9342320218347511
-aliens,alien invasion,0.8483174963509481
-aliens,space,0.8677171086883283
-animated,animation,0.8486251081553485
-animation,animated,0.8486251081553485
-animation,cartoon,0.8046346411745936
-author:alan moore,based on comic,0.8147370356538375
-author:alan moore,comic book adaption,0.8200728795108313
-author:alan moore,comics,0.8068234446623955
-author:alan moore,dc comics,0.8848177013734501
-bad plot,bad script,0.8182124590615045
-bad script,bad plot,0.8182124590615045
-based on comic,adapted from:comic,0.8022906599542425
-based on comic,author:alan moore,0.8147370356538375
-based on comic,comic book,0.8102809992280338
-based on comic,comic book adaption,0.9151219899508297
-based on comic,comics,0.897815195136018
-based on comic,dc comics,0.8010650566913303
-based on comic,super-hero,0.8781642994854858
-based on comic,superhero,0.8552620055323441
-batman,dc comics,0.8952320589631143
-biblical,christianity,0.8078405277053534
-big budget,special effects,0.8006845202250276
-bond,007,0.8576589022993233
-bond,007 (series),0.8519486411166511
-bond,james bond,0.9009340923222313
-cartoon,animation,0.8046346411745936
-cartoon,talking animals,0.8324747338252136
-chick flick,girlie movie,0.8018829572382385
-chick flick,good romantic comedies,0.8143073067801183
-chick flick,romantic comedy,0.8116486439615737
-christian,religion,0.8191308421502969
-christianity,biblical,0.8078405277053534
-comedy,funny,0.8344784979717361
-comic book,adapted from:comic,0.8187779599699209
-comic book,based on comic,0.8102809992280338
-comic book,super hero,0.8232123712026106
-comic book,superhero,0.8059012936812672
-comic book adaption,author:alan moore,0.8200728795108313
-comic book adaption,based on comic,0.9151219899508297
-comic book adaption,comics,0.9159989192630691
-comic book adaption,dc comics,0.8131682839257952
-comic book adaption,super-hero,0.8634971478728308
-comics,author:alan moore,0.8068234446623955
-comics,based on comic,0.897815195136018
-comics,comic book adaption,0.9159989192630691
-comics,super-hero,0.8477050217579377
-criterion,golden palm,0.832073032114019
-cult classic,cult film,0.8104395054082437
-cult film,cult classic,0.8104395054082437
-dark comedy,dark humor,0.8789602986304391
-dark humor,dark comedy,0.8789602986304391
-dc comics,author:alan moore,0.8848177013734501
-dc comics,based on comic,0.8010650566913303
-dc comics,batman,0.8952320589631143
-dc comics,comic book adaption,0.8131682839257952
-dog,dogs,0.8202187242405962
-dogs,dog,0.8202187242405962
-emma watson,harry potter,0.9756335238515123
-espionage,spy,0.8414304868551348
-excellent script,good acting,0.8404299198313328
-excellent script,great acting,0.8004730000142115
-excellent script,powerful ending,0.8125070527680954
-exceptional acting,great acting,0.8418310797135188
-exceptional acting,oscar (best directing),0.8100554572035722
-exceptional acting,oscar (best supporting actor),0.8310239844873882
-feel good movie,feel-good,0.8336576735078005
-feel-good,feel good movie,0.8336576735078005
-funny,comedy,0.8344784979717361
-girlie movie,chick flick,0.8018829572382385
-golden palm,criterion,0.832073032114019
-good acting,excellent script,0.8404299198313328
-good acting,great acting,0.8205330587773327
-good romantic comedies,chick flick,0.8143073067801183
-gore,gory,0.8337498249444966
-gore,splatter,0.8167902940358523
-gory,gore,0.8337498249444966
-great acting,excellent script,0.8004730000142115
-great acting,exceptional acting,0.8418310797135188
-great acting,good acting,0.8205330587773327
-great acting,oscar (best supporting actor),0.8033313650265343
-great acting,powerful ending,0.8373533774405928
-harry potter,emma watson,0.9756335238515123
-high school,teen movie,0.8168326479775466
-hilarious,very funny,0.8401883581508299
-history,us history,0.8145230782768791
-horror,scary,0.8276671636148344
-imdb top 250,oscar (best directing),0.8024902121839558
-iraq,iraq war,0.9242833399769584
-iraq war,iraq,0.9242833399769584
-james bond,007,0.9789409574726261
-james bond,007 (series),0.9819555456482666
-james bond,bond,0.9009340923222313
-kids and family,talking animals,0.8003220390905763
-music,musicians,0.8178518653116039
-musicians,music,0.8178518653116039
-nazis,world war ii,0.840862707172564
-nudity (full frontal - notable),nudity (full frontal),0.849050140153451
-nudity (full frontal),nudity (full frontal - notable),0.849050140153451
-oscar (best actor),oscar (best picture),0.912828717282116
-oscar (best actress),oscar (best directing),0.8047948563577584
-oscar (best cinematography),oscar (best directing),0.8107022594662205
-oscar (best directing),exceptional acting,0.8100554572035722
-oscar (best directing),imdb top 250,0.8024902121839558
-oscar (best directing),oscar (best actress),0.8047948563577584
-oscar (best directing),oscar (best cinematography),0.8107022594662205
-oscar (best directing),oscar (best picture),0.8153748486521117
-oscar (best directing),oscar (best supporting actor),0.9160650147517031
-oscar (best directing),oscar (best supporting actress),0.8087023149820929
-oscar (best picture),oscar (best actor),0.912828717282116
-oscar (best picture),oscar (best directing),0.8153748486521117
-oscar (best picture),oscar winner,0.8262633644423876
-oscar (best supporting actor),exceptional acting,0.8310239844873882
-oscar (best supporting actor),great acting,0.8033313650265343
-oscar (best supporting actor),oscar (best directing),0.9160650147517031
-oscar (best supporting actress),oscar (best directing),0.8087023149820929
-oscar winner,oscar (best picture),0.8262633644423876
-post apocalyptic,post-apocalyptic,0.8591019836292333
-post-apocalyptic,post apocalyptic,0.8591019836292333
-powerful ending,excellent script,0.8125070527680954
-powerful ending,great acting,0.8373533774405928
-powerful ending,thought-provoking,0.8125445139288314
-religion,christian,0.8191308421502969
-robot,robots,0.8567619208050029
-robots,robot,0.8567619208050029
-romantic comedy,chick flick,0.8116486439615737
-scary,horror,0.8276671636148344
-sci fi,sci-fi,0.8564317948341539
-sci fi,scifi,0.8922719824168417
-sci-fi,sci fi,0.8564317948341539
-sci-fi,scifi,0.9058334760545039
-scifi,sci fi,0.8922719824168417
-scifi,sci-fi,0.9058334760545039
-secret service,spies,0.8024127429649519
-secret service,spy,0.8124306243476374
-space,alien,0.8129445109474734
-space,aliens,0.8677171086883283
-special effects,big budget,0.8006845202250276
-spies,secret service,0.8024127429649519
-spies,spy,0.8192182399589989
-splatter,gore,0.8167902940358523
-spy,espionage,0.8414304868551348
-spy,secret service,0.8124306243476374
-spy,spies,0.8192182399589989
-super hero,comic book,0.8232123712026106
-super hero,super-hero,0.8928030625350182
-super hero,superhero,0.9503297898831116
-super-hero,based on comic,0.8781642994854858
-super-hero,comic book adaption,0.8634971478728308
-super-hero,comics,0.8477050217579377
-super-hero,super hero,0.8928030625350182
-super-hero,superhero,0.9238038486402886
-superhero,adapted from:comic,0.8118584169593799
-superhero,based on comic,0.8552620055323441
-superhero,comic book,0.8059012936812672
-superhero,super hero,0.9503297898831116
-superhero,super-hero,0.9238038486402886
-talking animals,cartoon,0.8324747338252136
-talking animals,kids and family,0.8003220390905763
-teen,teen movie,0.8780068878483469
-teen movie,high school,0.8168326479775466
-teen movie,teen,0.8780068878483469
-thought-provoking,powerful ending,0.8125445139288314
-us history,history,0.8145230782768791
-vampire,vampires,0.9637294027217014
-vampires,vampire,0.9637294027217014
-very funny,hilarious,0.8401883581508299
-world war ii,nazis,0.840862707172564
-world war ii,wwii,0.8512624590263542
-wwii,world war ii,0.8512624590263542
+007,007 (series),0.9491751808816548
+007,bond,0.8309619867355692
+007,james bond,0.9482818443589565
+007 (series),007,0.9491751808816548
+007 (series),bond,0.8182976050438374
+007 (series),james bond,0.9520025712871226
+action,action packed,0.7314338163093421
+action,fighting,0.7085788014934865
+action packed,action,0.7314338163093421
+action packed,good action,0.7909198341934771
+adapted from:book,based on book,0.7381174718331617
+adapted from:comic,based on a comic,0.7730073973282474
+adapted from:comic,based on comic,0.7734364004923088
+adapted from:comic,comic book,0.7730016239072777
+adapted from:comic,super hero,0.7219610652390728
+adapted from:comic,superhero,0.7683749499995465
+adapted from:game,video game adaptation,0.8121241285320991
+adapted from:game,videogame,0.7105172369983601
+alien,alien invasion,0.8051823913346938
+alien,aliens,0.9109243629572706
+alien,space,0.723120920404432
+alien invasion,alien,0.8051823913346938
+alien invasion,aliens,0.8488031728878885
+aliens,alien,0.9109243629572706
+aliens,alien invasion,0.8488031728878885
+aliens,space,0.8028152199348177
+aliens,space opera,0.748191801086007
+amazing photography,great acting,0.7106536900058315
+android(s)/cyborg(s),man versus machine,0.7224462847431078
+animals,talking animals,0.7819390843220579
+animated,animation,0.8807705717961709
+animated,cartoon,0.7788457634132095
+animated,talking animals,0.7088098716086444
+animation,animated,0.8807705717961709
+animation,cartoon,0.8034972025415263
+animation,talking animals,0.7395356860996926
+artificial intelligence,virtual reality,0.712795892145755
+author:alan moore,based on comic,0.7020263001461894
+author:alan moore,comic book adaption,0.7574947104621721
+author:alan moore,dc comics,0.7436085312190153
+bad acting,bad plot,0.7242881451384676
+bad acting,predictable,0.7095357028062621
+bad cgi,heroine in tight suit,0.7209595105061286
+bad plot,bad acting,0.7242881451384676
+bad plot,bad script,0.8056604043151516
+bad plot,based on a video game,0.7689799607730557
+bad plot,big budget,0.7214612127503127
+bad plot,crappy sequel,0.7293492766337594
+bad script,bad plot,0.8056604043151516
+bad script,based on a video game,0.7220443031260019
+based on a comic,adapted from:comic,0.7730073973282474
+based on a comic,comic book,0.7579110049677558
+based on a comic,dynamic cgi action,0.7370883296624308
+based on a comic,superheroes,0.7310783899544703
+based on a video game,bad plot,0.7689799607730557
+based on a video game,bad script,0.7220443031260019
+based on a video game,computer game,0.7684973294746231
+based on book,adapted from:book,0.7381174718331617
+based on comic,adapted from:comic,0.7734364004923088
+based on comic,author:alan moore,0.7020263001461894
+based on comic,comic book,0.7556655720215305
+based on comic,comic book adaption,0.8786831364035093
+based on comic,comics,0.8197436566552218
+based on comic,super hero,0.7737358023246406
+based on comic,super-hero,0.8168682357069926
+based on comic,superhero,0.8120026573942709
+beautiful scenery,beautifully filmed,0.7123870117097342
+beautifully filmed,beautiful scenery,0.7123870117097342
+beautifully filmed,great cinematography,0.7503597906342238
+biblical,christianity,0.7024589964043143
+biblical,religion,0.7117437676050401
+big budget,bad plot,0.7214612127503127
+big budget,dynamic cgi action,0.719470641461402
+big budget,special effects,0.7917087818260158
+biographical,biography,0.7203521480846573
+biography,biographical,0.7203521480846573
+biography,biopic,0.7511249630958287
+biopic,biography,0.7511249630958287
+black comedy,dark comedy,0.7090148036004729
+bleak,downbeat,0.7130025277985146
+bond,007,0.8309619867355692
+bond,007 (series),0.8182976050438374
+bond,james bond,0.8650828065235888
+brutal,brutality,0.7065994091178613
+brutality,brutal,0.7065994091178613
+cartoon,animated,0.7788457634132095
+cartoon,animation,0.8034972025415263
+cartoon,kids and family,0.7218277440932731
+cartoon,talking animals,0.8385021154637085
+catholicism,christianity,0.7085099472632097
+catholicism,religion,0.7226838892333004
+character study,criterion,0.7181353293764551
+character study,depression,0.710076419118875
+character study,golden palm,0.7583124516006771
+character study,working class,0.7356437344501999
+chick flick,girlie movie,0.7882295743376664
+chick flick,good romantic comedies,0.8286476780236021
+chick flick,romantic comedy,0.7756640227821625
+children,kids,0.7572740515562963
+christian,religion,0.77975036557319
+christianity,biblical,0.7024589964043143
+christianity,catholicism,0.7085099472632097
+comedy,funny,0.8422343247891427
+comedy,hilarious,0.7061646911961491
+comedy,very funny,0.7584742801785446
+comic book,adapted from:comic,0.7730016239072777
+comic book,based on a comic,0.7579110049677558
+comic book,based on comic,0.7556655720215305
+comic book,super hero,0.7600098047815852
+comic book,superhero,0.759366959588914
+comic book adaption,author:alan moore,0.7574947104621721
+comic book adaption,based on comic,0.8786831364035093
+comic book adaption,comics,0.8368350222961474
+comic book adaption,dc comics,0.73930466588282
+comic book adaption,marvel,0.7261148901742467
+comic book adaption,super hero,0.7072296579936177
+comic book adaption,super-hero,0.8285940573297411
+comic book adaption,superhero,0.743876106158039
+comics,based on comic,0.8197436566552218
+comics,comic book adaption,0.8368350222961474
+comics,super-hero,0.7772768257404091
+comics,superhero,0.7046323655802924
+computer game,based on a video game,0.7684973294746231
+crappy sequel,bad plot,0.7293492766337594
+crappy sequel,good sequel,0.7589331880118952
+crappy sequel,not as good as the first,0.7213035348805208
+creepy,scary,0.7070004738391966
+crime gone awry,dark comedy,0.7156065606003904
+crime gone awry,dark humor,0.7155088346853767
+criterion,character study,0.7181353293764551
+criterion,existentialism,0.7359251389053092
+criterion,golden palm,0.82983223084648
+criterion,independent film,0.727166845215432
+criterion,melancholy,0.7116385251171253
+criterion,working class,0.7195274384027196
+cult classic,cult film,0.8055939396908136
+cult film,cult classic,0.8055939396908136
+cute,cute!,0.8138440204221334
+cute!,cute,0.8138440204221334
+dark comedy,black comedy,0.7090148036004729
+dark comedy,crime gone awry,0.7156065606003904
+dark comedy,dark humor,0.8833917497580636
+dark humor,crime gone awry,0.7155088346853767
+dark humor,dark comedy,0.8833917497580636
+dark humor,off-beat comedy,0.7004906652539926
+dc comics,author:alan moore,0.7436085312190153
+dc comics,comic book adaption,0.73930466588282
+depression,character study,0.710076419118875
+depression,dysfunctional family,0.7078697619923614
+depression,existentialism,0.7057992270199756
+depression,golden palm,0.7096237915460805
+depression,loneliness,0.74307462801785
+depression,melancholic,0.7275665663870579
+depression,melancholy,0.7025842099090417
+dialogue driven,talky,0.7401511084185192
+disney,kids and family,0.7566479433696902
+disney,oscar (best music - original song),0.7113903883115513
+disney,talking animals,0.784445216671885
+dog,dogs,0.805090502402847
+dogs,dog,0.805090502402847
+downbeat,bleak,0.7130025277985146
+dramatic,excellent script,0.7434318004015145
+dramatic,good acting,0.7215887013711093
+dynamic cgi action,based on a comic,0.7370883296624308
+dynamic cgi action,big budget,0.719470641461402
+dysfunctional family,depression,0.7078697619923614
+dystopia,dystopic future,0.8121855173741309
+dystopia,future,0.7261566049351529
+dystopia,post apocalyptic,0.727298133778666
+dystopia,post-apocalyptic,0.7919910868348357
+dystopic future,dystopia,0.8121855173741309
+dystopic future,future,0.7507309065240259
+dystopic future,post apocalyptic,0.7188083491504212
+dystopic future,post-apocalyptic,0.7665369474343677
+emma watson,harry potter,0.952334336627813
+enigmatic,existentialism,0.705627249205279
+enigmatic,golden palm,0.7151234246464658
+enigmatic,melancholy,0.7107896559176494
+espionage,spies,0.7641346836415455
+espionage,spy,0.83199427625469
+excellent script,dramatic,0.7434318004015145
+excellent script,exceptional acting,0.7745145302839574
+excellent script,good acting,0.8326612934451106
+excellent script,good dialogue,0.734384522109734
+excellent script,great acting,0.792985243470318
+excellent script,great music,0.7008443557517644
+excellent script,oscar (best directing),0.7330681765968295
+excellent script,oscar (best supporting actor),0.7338884756666663
+excellent script,oscar winner,0.7258073697351177
+excellent script,powerful ending,0.801863781024731
+excellent script,thought-provoking,0.7274900195869793
+exceptional acting,excellent script,0.7745145302839574
+exceptional acting,good acting,0.7439933855426132
+exceptional acting,great acting,0.8410843393771359
+exceptional acting,oscar (best actress),0.7145096014718183
+exceptional acting,oscar (best directing),0.8097344013424363
+exceptional acting,oscar (best supporting actor),0.817103604522588
+exceptional acting,oscar (best supporting actress),0.7215926940037635
+exceptional acting,powerful ending,0.7436551516590189
+existentialism,criterion,0.7359251389053092
+existentialism,depression,0.7057992270199756
+existentialism,enigmatic,0.705627249205279
+existentialism,golden palm,0.7696106652689747
+existentialism,independent film,0.7011473764884563
+existentialism,loneliness,0.7206655557910028
+existentialism,melancholic,0.7018462058485215
+existentialism,melancholy,0.7563022204719179
+father daughter relationship,father son relationship,0.7880068256086302
+father son relationship,father daughter relationship,0.7880068256086302
+feel good movie,feel-good,0.8461010326308305
+feel-good,feel good movie,0.8461010326308305
+fighting,action,0.7085788014934865
+film noir,noir thriller,0.7023109761420236
+france,french,0.7224053208615567
+france,paris,0.7640724837233107
+french,france,0.7224053208615567
+fun,fun movie,0.746897755658912
+fun movie,fun,0.746897755658912
+funny,comedy,0.8422343247891427
+funny,hilarious,0.7024543285427491
+funny,very funny,0.7805542619024397
+funny as hell,hilarious,0.7084448899165351
+future,dystopia,0.7261566049351529
+future,dystopic future,0.7507309065240259
+future,futuristic,0.7736505659155739
+future,sci-fi,0.7050960724232703
+future,scifi,0.7363982395728327
+futuristic,future,0.7736505659155739
+futuristic,sci fi,0.707398798393888
+futuristic,sci-fi,0.7506163993685536
+futuristic,scifi,0.7492563423875186
+gangster,gangsters,0.711277082567961
+gangster,organized crime,0.7000791137547013
+gangsters,gangster,0.711277082567961
+gangsters,mob,0.7279447612681432
+germany,nazis,0.7127125381455164
+germany,world war ii,0.7221576541382445
+girlie movie,chick flick,0.7882295743376664
+girlie movie,good romantic comedies,0.7570569011188728
+girlie movie,romantic comedy,0.7755933293969229
+god,religion,0.7272537948945736
+golden palm,character study,0.7583124516006771
+golden palm,criterion,0.82983223084648
+golden palm,depression,0.7096237915460805
+golden palm,enigmatic,0.7151234246464658
+golden palm,existentialism,0.7696106652689747
+golden palm,independent film,0.7214617083396571
+golden palm,melancholic,0.7319599514902093
+golden palm,melancholy,0.783381151405168
+golden palm,social commentary,0.7072720814570012
+golden palm,tragedy,0.7122818907592464
+good acting,dramatic,0.7215887013711093
+good acting,excellent script,0.8326612934451106
+good acting,exceptional acting,0.7439933855426132
+good acting,good dialogue,0.7681573936555924
+good acting,good soundtrack,0.7331965041635718
+good acting,great acting,0.824593966022747
+good acting,interesting,0.7420032685427596
+good acting,moral ambiguity,0.7203238687451843
+good acting,oscar (best directing),0.7275191026232447
+good acting,oscar (best supporting actor),0.7240521567022826
+good acting,powerful ending,0.7697170440355368
+good acting,thought-provoking,0.7392857835372574
+good acting,twists & turns,0.7112926301439922
+good action,action packed,0.7909198341934771
+good dialogue,excellent script,0.734384522109734
+good dialogue,good acting,0.7681573936555924
+good dialogue,great soundtrack,0.719219796514225
+good music,great soundtrack,0.7095398706006156
+good romantic comedies,chick flick,0.8286476780236021
+good romantic comedies,girlie movie,0.7570569011188728
+good romantic comedies,romantic comedy,0.7662905176735301
+good sequel,crappy sequel,0.7589331880118952
+good soundtrack,good acting,0.7331965041635718
+gore,gory,0.8145510274454653
+gore,gruesome,0.7675485777752549
+gore,horror,0.7718170613317169
+gore,splatter,0.8216514195972917
+gore,zombie,0.7057179136847699
+gory,gore,0.8145510274454653
+gory,gruesome,0.7075831485320466
+gory,splatter,0.7188091077134189
+great,great movie,0.7579585779525868
+great acting,amazing photography,0.7106536900058315
+great acting,excellent script,0.792985243470318
+great acting,exceptional acting,0.8410843393771359
+great acting,good acting,0.824593966022747
+great acting,oscar (best directing),0.7744616656907856
+great acting,oscar (best supporting actor),0.7823307140821495
+great acting,powerful ending,0.8237879776465844
+great acting,social commentary,0.7522529195583102
+great acting,thought-provoking,0.7495818576912942
+great acting,twists & turns,0.7446170225394637
+great cinematography,beautifully filmed,0.7503597906342238
+great ending,twists & turns,0.7466472726576259
+great movie,great,0.7579585779525868
+great music,excellent script,0.7008443557517644
+great soundtrack,good dialogue,0.719219796514225
+great soundtrack,good music,0.7095398706006156
+gruesome,gore,0.7675485777752549
+gruesome,gory,0.7075831485320466
+hackers,hacking,0.7295770175389945
+hacking,hackers,0.7295770175389945
+happy ending,pg-13,0.736583800397498
+harry potter,emma watson,0.952334336627813
+haunted house,horror,0.7731129136947235
+haunted house,scary,0.7283545565770778
+haunted house,supernatural,0.7060380132315524
+heroine in tight suit,bad cgi,0.7209595105061286
+high school,teen,0.733598021685197
+high school,teen movie,0.8062268094314542
+hilarious,comedy,0.7061646911961491
+hilarious,funny,0.7024543285427491
+hilarious,funny as hell,0.7084448899165351
+hilarious,very funny,0.8345202536446892
+historical,history,0.7949780172541581
+historical,us history,0.7394623311225177
+history,historical,0.7949780172541581
+history,us history,0.8255318427539191
+hit men,hitman,0.735325100356213
+hitman,hit men,0.735325100356213
+holocaust,nazis,0.7169340001730778
+homophobia,homosexuality,0.731675779533066
+homosexuality,homophobia,0.731675779533066
+horror,gore,0.7718170613317169
+horror,haunted house,0.7731129136947235
+horror,monster,0.7043664360488192
+horror,scary,0.810533425017102
+horror,splatter,0.7134739509840937
+horror,supernatural,0.7178198916546294
+humor,humorous,0.7173306477711658
+humor,very funny,0.7048259040421194
+humorous,humor,0.7173306477711658
+imdb top 250,oscar (best directing),0.7802472401546512
+imdb top 250,oscar (best supporting actor),0.7470686903800309
+independent film,criterion,0.727166845215432
+independent film,existentialism,0.7011473764884563
+independent film,golden palm,0.7214617083396571
+interesting,good acting,0.7420032685427596
+interesting,thought-provoking,0.7091786684984464
+interesting,very interesting,0.7059042308542715
+iraq,iraq war,0.8893875274318243
+iraq war,iraq,0.8893875274318243
+iraq war,military,0.7025664593141401
+james bond,007,0.9482818443589565
+james bond,007 (series),0.9520025712871226
+james bond,bond,0.8650828065235888
+jewish,jews,0.7458260584268646
+jews,jewish,0.7458260584268646
+kids,children,0.7572740515562963
+kids and family,cartoon,0.7218277440932731
+kids and family,disney,0.7566479433696902
+kids and family,oscar (best music - original song),0.7607241846448434
+kids and family,talking animals,0.7967532814783721
+kung fu,martial arts,0.7642197684793283
+loneliness,depression,0.74307462801785
+loneliness,existentialism,0.7206655557910028
+loneliness,melancholic,0.7310959351906888
+loneliness,melancholy,0.746992999804086
+man versus machine,android(s)/cyborg(s),0.7224462847431078
+martial arts,kung fu,0.7642197684793283
+marvel,comic book adaption,0.7261148901742467
+melancholic,depression,0.7275665663870579
+melancholic,existentialism,0.7018462058485215
+melancholic,golden palm,0.7319599514902093
+melancholic,loneliness,0.7310959351906888
+melancholic,melancholy,0.7211219085690894
+melancholy,criterion,0.7116385251171253
+melancholy,depression,0.7025842099090417
+melancholy,enigmatic,0.7107896559176494
+melancholy,existentialism,0.7563022204719179
+melancholy,golden palm,0.783381151405168
+melancholy,loneliness,0.746992999804086
+melancholy,melancholic,0.7211219085690894
+melancholy,tragedy,0.7073251901477327
+military,iraq war,0.7025664593141401
+miyazaki,studio ghibli,0.7685962792117033
+mob,gangsters,0.7279447612681432
+monster,horror,0.7043664360488192
+moral ambiguity,good acting,0.7203238687451843
+music,musicians,0.8117697540972065
+musicians,music,0.8117697540972065
+nazi,nazis,0.811030384591919
+nazis,germany,0.7127125381455164
+nazis,holocaust,0.7169340001730778
+nazis,nazi,0.811030384591919
+nazis,world war ii,0.8343286100380385
+nazis,wwii,0.7478703462115623
+new york,new york city,0.7741558270993583
+new york city,new york,0.7741558270993583
+noir thriller,film noir,0.7023109761420236
+not as good as the first,crappy sequel,0.7213035348805208
+nudity (full frontal - notable),nudity (full frontal),0.8484342825871547
+nudity (full frontal),nudity (full frontal - notable),0.8484342825871547
+off-beat comedy,dark humor,0.7004906652539926
+organized crime,gangster,0.7000791137547013
+oscar (best actor),oscar (best directing),0.760835298425461
+oscar (best actor),oscar (best picture),0.898120612703856
+oscar (best actor),oscar (best supporting actor),0.736143646633306
+oscar (best actor),oscar (best writing - screenplay written directly for the screen),0.7096287623115514
+oscar (best actor),oscar winner,0.740186483493394
+oscar (best actress),exceptional acting,0.7145096014718183
+oscar (best actress),oscar (best directing),0.7963637795183357
+oscar (best actress),oscar (best supporting actor),0.7390771621385827
+oscar (best actress),oscar (best supporting actress),0.7821356505454732
+oscar (best cinematography),oscar (best directing),0.8013352083296218
+oscar (best cinematography),oscar (best picture),0.730168899702698
+oscar (best cinematography),oscar (best supporting actor),0.7356217631997479
+oscar (best directing),excellent script,0.7330681765968295
+oscar (best directing),exceptional acting,0.8097344013424363
+oscar (best directing),good acting,0.7275191026232447
+oscar (best directing),great acting,0.7744616656907856
+oscar (best directing),imdb top 250,0.7802472401546512
+oscar (best directing),oscar (best actor),0.760835298425461
+oscar (best directing),oscar (best actress),0.7963637795183357
+oscar (best directing),oscar (best cinematography),0.8013352083296218
+oscar (best directing),oscar (best picture),0.80395433932841
+oscar (best directing),oscar (best supporting actor),0.906820731842497
+oscar (best directing),oscar (best supporting actress),0.8074098787393028
+oscar (best directing),oscar winner,0.7186748389414882
+oscar (best effects - visual effects),oscar (best sound),0.7396301519544161
+oscar (best music - original song),disney,0.7113903883115513
+oscar (best music - original song),kids and family,0.7607241846448434
+oscar (best music - original song),talking animals,0.708824289606239
+oscar (best picture),oscar (best actor),0.898120612703856
+oscar (best picture),oscar (best cinematography),0.730168899702698
+oscar (best picture),oscar (best directing),0.80395433932841
+oscar (best picture),oscar (best supporting actor),0.7475665067971939
+oscar (best picture),oscar winner,0.8124875609831081
+oscar (best sound),oscar (best effects - visual effects),0.7396301519544161
+oscar (best supporting actor),excellent script,0.7338884756666663
+oscar (best supporting actor),exceptional acting,0.817103604522588
+oscar (best supporting actor),good acting,0.7240521567022826
+oscar (best supporting actor),great acting,0.7823307140821495
+oscar (best supporting actor),imdb top 250,0.7470686903800309
+oscar (best supporting actor),oscar (best actor),0.736143646633306
+oscar (best supporting actor),oscar (best actress),0.7390771621385827
+oscar (best supporting actor),oscar (best cinematography),0.7356217631997479
+oscar (best supporting actor),oscar (best directing),0.906820731842497
+oscar (best supporting actor),oscar (best picture),0.7475665067971939
+oscar (best supporting actor),oscar (best supporting actress),0.7511925423209684
+oscar (best supporting actor),oscar winner,0.7063487363153709
+oscar (best supporting actress),exceptional acting,0.7215926940037635
+oscar (best supporting actress),oscar (best actress),0.7821356505454732
+oscar (best supporting actress),oscar (best directing),0.8074098787393028
+oscar (best supporting actress),oscar (best supporting actor),0.7511925423209684
+oscar (best writing - screenplay written directly for the screen),oscar (best actor),0.7096287623115514
+oscar winner,excellent script,0.7258073697351177
+oscar winner,oscar (best actor),0.740186483493394
+oscar winner,oscar (best directing),0.7186748389414882
+oscar winner,oscar (best picture),0.8124875609831081
+oscar winner,oscar (best supporting actor),0.7063487363153709
+paris,france,0.7640724837233107
+parody,spoof,0.7821831829105188
+pg-13,happy ending,0.736583800397498
+political,politics,0.7524369214265908
+politics,political,0.7524369214265908
+post apocalyptic,dystopia,0.727298133778666
+post apocalyptic,dystopic future,0.7188083491504212
+post apocalyptic,post-apocalyptic,0.8789195952738557
+post-apocalyptic,dystopia,0.7919910868348357
+post-apocalyptic,dystopic future,0.7665369474343677
+post-apocalyptic,post apocalyptic,0.8789195952738557
+powerful ending,excellent script,0.801863781024731
+powerful ending,exceptional acting,0.7436551516590189
+powerful ending,good acting,0.7697170440355368
+powerful ending,great acting,0.8237879776465844
+powerful ending,social commentary,0.7690627672200567
+powerful ending,thought-provoking,0.7963238779104281
+powerful ending,twists & turns,0.718235848175123
+predictable,bad acting,0.7095357028062621
+psychological,psychology,0.7212971286955114
+psychology,psychological,0.7212971286955114
+religion,biblical,0.7117437676050401
+religion,catholicism,0.7226838892333004
+religion,christian,0.77975036557319
+religion,god,0.7272537948945736
+robot,robots,0.812477021629999
+robots,robot,0.812477021629999
+romance,romantic,0.7028841783863172
+romantic,romance,0.7028841783863172
+romantic comedy,chick flick,0.7756640227821625
+romantic comedy,girlie movie,0.7755933293969229
+romantic comedy,good romantic comedies,0.7662905176735301
+satire,satirical,0.7393145338829392
+satirical,satire,0.7393145338829392
+scary,creepy,0.7070004738391966
+scary,haunted house,0.7283545565770778
+scary,horror,0.810533425017102
+scary,supernatural,0.7330669818871993
+sci fi,futuristic,0.707398798393888
+sci fi,sci-fi,0.8603258620659177
+sci fi,scifi,0.8883978183226563
+sci-fi,future,0.7050960724232703
+sci-fi,futuristic,0.7506163993685536
+sci-fi,sci fi,0.8603258620659177
+sci-fi,science,0.7091904543031754
+sci-fi,scifi,0.901901461704362
+science,sci-fi,0.7091904543031754
+scifi,future,0.7363982395728327
+scifi,futuristic,0.7492563423875186
+scifi,sci fi,0.8883978183226563
+scifi,sci-fi,0.901901461704362
+secret service,spies,0.719073533993395
+secret service,spy,0.7445334865474166
+sequel,sequels,0.7940295436432365
+sequels,sequel,0.7940295436432365
+social commentary,golden palm,0.7072720814570012
+social commentary,great acting,0.7522529195583102
+social commentary,powerful ending,0.7690627672200567
+social commentary,thought-provoking,0.7227696069835334
+space,alien,0.723120920404432
+space,aliens,0.8028152199348177
+space,space opera,0.7820454042169918
+space,space travel,0.7384424922284274
+space opera,aliens,0.748191801086007
+space opera,space,0.7820454042169918
+space opera,space travel,0.738859009345966
+space travel,space,0.7384424922284274
+space travel,space opera,0.738859009345966
+special effects,big budget,0.7917087818260158
+spies,espionage,0.7641346836415455
+spies,secret service,0.719073533993395
+spies,spy,0.8027037687085307
+splatter,gore,0.8216514195972917
+splatter,gory,0.7188091077134189
+splatter,horror,0.7134739509840937
+splatter,zombie,0.7106369587450079
+spock,star trek,0.8437134858306063
+spoof,parody,0.7821831829105188
+spy,espionage,0.83199427625469
+spy,secret service,0.7445334865474166
+spy,spies,0.8027037687085307
+star trek,spock,0.8437134858306063
+studio ghibli,miyazaki,0.7685962792117033
+super hero,adapted from:comic,0.7219610652390728
+super hero,based on comic,0.7737358023246406
+super hero,comic book,0.7600098047815852
+super hero,comic book adaption,0.7072296579936177
+super hero,super-hero,0.8774309893921999
+super hero,superhero,0.952963289002749
+super-hero,based on comic,0.8168682357069926
+super-hero,comic book adaption,0.8285940573297411
+super-hero,comics,0.7772768257404091
+super-hero,super hero,0.8774309893921999
+super-hero,superhero,0.9048259721960153
+superhero,adapted from:comic,0.7683749499995465
+superhero,based on comic,0.8120026573942709
+superhero,comic book,0.759366959588914
+superhero,comic book adaption,0.743876106158039
+superhero,comics,0.7046323655802924
+superhero,super hero,0.952963289002749
+superhero,super-hero,0.9048259721960153
+superheroes,based on a comic,0.7310783899544703
+supernatural,haunted house,0.7060380132315524
+supernatural,horror,0.7178198916546294
+supernatural,scary,0.7330669818871993
+surreal,surrealism,0.7365423029859556
+surrealism,surreal,0.7365423029859556
+suspense,suspenseful,0.7157342561413337
+suspense,thriller,0.7192453767713815
+suspenseful,suspense,0.7157342561413337
+sword fight,sword fighting,0.7276536009279131
+sword fighting,sword fight,0.7276536009279131
+talking animals,animals,0.7819390843220579
+talking animals,animated,0.7088098716086444
+talking animals,animation,0.7395356860996926
+talking animals,cartoon,0.8385021154637085
+talking animals,disney,0.784445216671885
+talking animals,kids and family,0.7967532814783721
+talking animals,oscar (best music - original song),0.708824289606239
+talky,dialogue driven,0.7401511084185192
+teen,high school,0.733598021685197
+teen,teen movie,0.8751405744383738
+teen,teens,0.7143318720315336
+teen movie,high school,0.8062268094314542
+teen movie,teen,0.8751405744383738
+teens,teen,0.7143318720315336
+thought-provoking,excellent script,0.7274900195869793
+thought-provoking,good acting,0.7392857835372574
+thought-provoking,great acting,0.7495818576912942
+thought-provoking,interesting,0.7091786684984464
+thought-provoking,powerful ending,0.7963238779104281
+thought-provoking,social commentary,0.7227696069835334
+thriller,suspense,0.7192453767713815
+time,time travel,0.7479769490555757
+time travel,time,0.7479769490555757
+tragedy,golden palm,0.7122818907592464
+tragedy,melancholy,0.7073251901477327
+twists & turns,good acting,0.7112926301439922
+twists & turns,great acting,0.7446170225394637
+twists & turns,great ending,0.7466472726576259
+twists & turns,powerful ending,0.718235848175123
+us history,historical,0.7394623311225177
+us history,history,0.8255318427539191
+vampire,vampires,0.9586927179786383
+vampires,vampire,0.9586927179786383
+very funny,comedy,0.7584742801785446
+very funny,funny,0.7805542619024397
+very funny,hilarious,0.8345202536446892
+very funny,humor,0.7048259040421194
+very interesting,interesting,0.7059042308542715
+video game,videogame,0.741217599659327
+video game adaptation,adapted from:game,0.8121241285320991
+videogame,adapted from:game,0.7105172369983601
+videogame,video game,0.741217599659327
+vietnam,vietnam war,0.7548028279333975
+vietnam war,vietnam,0.7548028279333975
+violence,violent,0.7584988995194389
+violent,violence,0.7584988995194389
+virtual reality,artificial intelligence,0.712795892145755
+wartime,wwii,0.7260782798201829
+werewolf,werewolves,0.7183208409399651
+werewolves,werewolf,0.7183208409399651
+working class,character study,0.7356437344501999
+working class,criterion,0.7195274384027196
+world war ii,germany,0.7221576541382445
+world war ii,nazis,0.8343286100380385
+world war ii,wwii,0.8608759623288927
+wwii,nazis,0.7478703462115623
+wwii,wartime,0.7260782798201829
+wwii,world war ii,0.8608759623288927
+zombie,gore,0.7057179136847699
+zombie,splatter,0.7106369587450079
