@@ -1,4 +1,3 @@
-import dataclasses
 from dataclasses import dataclass, field
 from typing import List, Dict, Set, Optional
 
@@ -17,6 +16,7 @@ class Movie:
     imdb_id: int
     starring: str
     directed_by: str
+    tags: List[str] = field(default_factory=list)
 
     # similar: Dict[SimilaritySettings, List] = field(default_factory=dict)
 
@@ -26,7 +26,8 @@ class Movie:
             "title": self.title,
             "imdb_id": self.imdb_id,
             "starring": self.starring,
-            "directed_by": self.directed_by
+            "directed_by": self.directed_by,
+            "tags": self.tags
         }
 
     def from_dict(d: Dict):
@@ -34,7 +35,8 @@ class Movie:
                      title=d["title"],
                      imdb_id=d["imdb_id"],
                      starring=d["starring"],
-                     directed_by=d["directed_by"])
+                     directed_by=d["directed_by"],
+                     tags=d["tags"])
 
 
 # TODO: Batched export/import from BigQuery FML (500 at a time)

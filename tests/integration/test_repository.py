@@ -58,8 +58,8 @@ def test_search(ghostbusters, lost_in_translation, lord_of_the_rings):
     assert repository.search_by_title("ost") == []
 
 
-def _create_random_id_movie(title) -> Movie:
-    return Movie(random.randint(-100000, 0), title, random.randint(-100000, 0), "", "")
+def _create_random_id_movie(title, tags=None) -> Movie:
+    return Movie(random.randint(-100000, 0), title, random.randint(-100000, 0), "", "", tags=tags)
 
 
 def test_save_get_movie_similarity(ghostbusters, lost_in_translation, lord_of_the_rings):
