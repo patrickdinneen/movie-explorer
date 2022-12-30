@@ -7,7 +7,7 @@ import random
 @pytest.fixture()
 def lost_in_translation():
     movie = _create_random_id_movie("Lost In Translation")
-    repository.save_movie(movie)
+    repository.write_movies([movie])
     yield movie
     repository.delete_movie(movie)
 
@@ -15,7 +15,7 @@ def lost_in_translation():
 @pytest.fixture()
 def lord_of_the_rings():
     movie = _create_random_id_movie("Lord Of The Rings")
-    repository.save_movie(movie)
+    repository.write_movies([movie])
     yield movie
     repository.delete_movie(movie)
 
@@ -23,7 +23,7 @@ def lord_of_the_rings():
 @pytest.fixture()
 def ghostbusters():
     movie = _create_random_id_movie("Ghostbusters")
-    repository.save_movie(movie)
+    repository.write_movies([movie])
     yield movie
     repository.delete_movie(movie)
 
@@ -35,7 +35,7 @@ def test_get_movie_error():
 
 def test_save_movie():
     random_movie = _create_random_id_movie("Random Save Movie")
-    repository.save_movie(random_movie)
+    repository.write_movies([random_movie])
     retrieved_movie = repository.get_movie(random_movie.id)
     assert random_movie == retrieved_movie
     repository.delete_movie(random_movie)
@@ -43,7 +43,7 @@ def test_save_movie():
 
 def test_delete_movie():
     any_old_movie = _create_random_id_movie("Random Delete Movie")
-    repository.save_movie(any_old_movie)
+    repository.write_movies([any_old_movie])
 
     repository.delete_movie(any_old_movie)
 

@@ -23,20 +23,23 @@ def get_movie(movie_id: int) -> Movie:
 
 
 def _get_movie_document(movie_id) -> DocumentReference:
-    movie_document_ref = _get_movies().document(str(movie_id))
-    return movie_document_ref
+    return _get_movies().document(str(movie_id))
 
 
-def save_movie(movie: Movie):
+def write_movies(movies: List[Movie]):
     """
     Save changes to movie.
 
     Movies that do not exist will be inserted.
     """
-    movie_document = _get_movie_document(movie.id)
-    movie_dict = movie.to_dict()
-    movie_dict["title_lower"] = movie.title.lower()
-    movie_document.set(movie_dict)
+    batch = client.batch()
+    for movie in movies:
+        movie_document = _get_movie_document(movie.id)
+        movie_dict = movie.to_dict()
+        movie_dict["title_lower"] = movie.title.lower()
+        batch.set(movie_document, movie_dict)
+    
+    batch.commit()
 
 
 def search_by_title(title: str, max_results: int = 10) -> List[Movie]:
