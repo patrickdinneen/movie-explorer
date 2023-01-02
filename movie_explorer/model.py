@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Dict, Set, Optional
+from pprint import pformat
 
 
 @dataclass(frozen=True)
@@ -30,7 +31,8 @@ class Movie:
             "tags": self.tags
         }
 
-    def from_dict(d: Dict):
+    @classmethod
+    def from_dict(cls, d: Dict):
         return Movie(id=d["id"],
                      title=d["title"],
                      imdb_id=d["imdb_id"],
@@ -38,28 +40,46 @@ class Movie:
                      directed_by=d["directed_by"],
                      tags=d["tags"])
 
+    def __repr__(self) -> str:
+        return f"{self.title} (id: {self.id})\ntags: {pformat(self.tags)}"
 
-# TODO: Batched export/import from BigQuery FML (500 at a time)
+    def __hash__(self) -> int:
+        return hash(self.id)
+
 
 @dataclass
 class MovieSimilarity:
     movie: Movie
     minimum_rating: Optional[float] = None
-    tags_to_boost: Set[str] = field(default_factory=set)
-    tags_to_penalise: Set[str] = field(default_factory=set)
-    similar_movies: Optional[Dict[Movie, float]] = None
+    tags_to_boost: Optional[Set[str]] = None
+    tags_to_penalise: Optional[Set[str]] = None
+    similar_movies: Dict[Movie, float] = field(default_factory=dict)
 
     def get_id(self):
-        result = f"movie={self.movie.id}"
+        return MovieSimilarity.create_id(self.movie.id,
+                                         self.minimum_rating,
+                                         self.tags_to_boost,
+                                         self.tags_to_penalise)
 
-        if self.minimum_rating:
-            result += f";minimum_rating={self.minimum_rating}"
+    @classmethod
+    def create_id(cls, movie_id: int,
+                  minimum_rating: Optional[float] = None,
+                  tags_to_boost: Optional[Set[str]] = None,
+                  tags_to_penalise: Optional[Set[str]] = None) -> str:
+        result = f"movie={movie_id}"
 
-        if self.tags_to_boost:
-            result += f";tags_to_boost={sorted(self.tags_to_boost)}"
+        if minimum_rating:
+            result += f";minimum_rating={minimum_rating}"
 
-        if self.tags_to_penalise:
-            result += f";tags_to_penalise={sorted(self.tags_to_penalise)}"
+        if tags_to_boost:
+            result += f";tags_to_boost={sorted(tags_to_boost)}"
+
+        if tags_to_penalise:
+            result += f";tags_to_penalise={sorted(tags_to_penalise)}"
 
         return result
 
+    def __repr__(self) -> str:
+        similarity_scores = {m.title: score
+                             for m, score in self.similar_movies.items()}
+        return f"Similar movies to {self.movie.title}\n{pformat(similarity_scores)}"

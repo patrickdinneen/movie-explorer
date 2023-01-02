@@ -1,5 +1,5 @@
 from collections import defaultdict
-from typing import List, Dict
+from typing import List, Dict, Optional, Set
 from google.cloud import bigquery
 from jinja2 import Template
 
@@ -64,8 +64,8 @@ similar_movies_query_template = """
 
 def get_similar(movie_ids: List[int],
                 number_of_results: int = 10,
-                tags_to_boost: List[str] = None,
-                tags_to_penalise: List[str] = None) -> Dict[int, Dict[int, float]]:
+                tags_to_boost: Optional[Set[str]] = None,
+                tags_to_penalise: Optional[Set[str]] = None) -> Dict[int, Dict[int, float]]:
     """
     Finds the most similar movies to the provided list of movie ids using Cosine Similarity.
 
@@ -92,15 +92,14 @@ def get_similar(movie_ids: List[int],
     if tags_to_penalise:
       query_parameters.append(bigquery.ArrayQueryParameter("tags_to_penalise", "STRING", tags_to_penalise))
 
+    # The attribute query_parameters is immutable but doesn't raise errors when you try to append, hence the multi-step process.
     job_config.query_parameters = query_parameters
-    print(job_config.query_parameters)
 
     query = Template(similar_movies_query_template).render(tags_to_boost=tags_to_boost, tags_to_penalise=tags_to_penalise)
-    results = bq_client.query(query, job_config)
-    similar_movies = defaultdict(dict)
+    query_response = bq_client.query(query, job_config)
+    result: Dict[int, Dict[int, float]] = defaultdict(dict)
 
-    for row in results:
-        similar_movies[row["reference_movie_id"]
-                       ][row["movie_id"]] = row["similarity_score"]
+    for row in query_response:
+        result[row["reference_movie_id"]][row["movie_id"]] = row["similarity_score"]
 
-    return similar_movies
+    return result

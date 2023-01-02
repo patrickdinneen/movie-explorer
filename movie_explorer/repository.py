@@ -91,10 +91,22 @@ def _similarity_to_dict(similarity: MovieSimilarity) -> Dict:
 def _dict_to_similarity(d: Dict) -> MovieSimilarity:
     similar_movies = {Movie.from_dict(client.document(doc).get().to_dict()): similarity_score
                       for doc, similarity_score in d["similar_movies"].items()}
+    tags_to_boost_list = d.get("tags_to_boost")
+    if tags_to_boost_list:
+        tags_to_boost = set(tags_to_boost_list)
+    else:
+        tags_to_boost = None
+
+    tags_to_penalise_list = d.get("tags_to_penalise")
+    if tags_to_penalise_list:
+        tags_to_penalise = set(tags_to_penalise_list)
+    else:
+        tags_to_penalise = None
+
     return MovieSimilarity(movie=Movie.from_dict(client.document(d["movie"]).get().to_dict()),
                            minimum_rating=d.get("minimum_rating"),
-                           tags_to_boost=set(d.get("tags_to_boost")),
-                           tags_to_penalise=set(d.get("tags_to_penalise")),
+                           tags_to_boost=tags_to_boost,
+                           tags_to_penalise=tags_to_penalise,
                            similar_movies=similar_movies)
 
 
