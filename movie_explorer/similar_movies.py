@@ -95,7 +95,8 @@ def get_similar(movie_ids: List[int],
     # The attribute query_parameters is immutable but doesn't raise errors when you try to append, hence the multi-step process.
     job_config.query_parameters = query_parameters
 
-    query = Template(similar_movies_query_template).render(tags_to_boost=tags_to_boost, tags_to_penalise=tags_to_penalise)
+    query = Template(similar_movies_query_template).render(tags_to_boost=tags_to_boost, 
+                                                           tags_to_penalise=tags_to_penalise)
     query_response = bq_client.query(query, job_config)
     result: Dict[int, Dict[int, float]] = defaultdict(dict)
 
