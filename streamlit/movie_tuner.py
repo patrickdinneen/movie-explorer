@@ -1,52 +1,32 @@
-import json
-import os
-
+import duckdb
 import streamlit as st
-import requests
-import google.auth.transport.requests
-import google.oauth2.id_token
-from typing import Dict
-from google.oauth2 import service_account
+from dataclasses import dataclass
+from typing import Dict, List
 
+@dataclass
+class Movie:
+    movie_id: int
+    movie_title: str
+    imdb_id: int | None = None
 
-def _get_credentials(service_account_info, target_audience):
-    return service_account.IDTokenCredentials.from_service_account_info(service_account_info,
-                                                                        target_audience=target_audience)
+    def __repr__(self) -> str:
+        return f"{self.movie_title} (id: {self.movie_id})"
 
-
-def _get_service_account_info() -> Dict[str, str]:
-    return st.secrets["gcp_service_account"]
-
-
-def _get_auth_headers(audience) -> Dict[str, str]:
-    credentials = _get_credentials(_get_service_account_info(), audience)
-    request = google.auth.transport.requests.Request()
-    credentials.refresh(request)
-    return {"Authorization": f"Bearer {credentials.token}"}
-
-
-def invoke_function(message):
-    url = "https://us-central1-pjd-hosting.cloudfunctions.net/similar-movies"
-    return requests.post("https://us-central1-pjd-hosting.cloudfunctions.net/similar-movies",
-                         json={"message": message},
-                         headers=_get_auth_headers(audience=url))
+def search(search_string: str) -> List[Movie]:
+    con = duckdb.connect(':default:')
+    query_string = """
+    SELECT item_id, title, imdb_id 
+    FROM 'data/movies.parquet'
+    WHERE contains(lower(title), ?)
+    LIMIT 20
+    """
+    con.execute(query_string, [search_string.lower()])
+    return [Movie(row[0], row[1], row[2]) for row in con.fetchall()]
 
 
 st.title("Movie Tuner")
 
-message = st.text_input("Message")
-echo_message_response = invoke_function(message)
+search_input = st.text_input("Search")
+search_result = search(search_input)
 
-if echo_message_response:
-    st.write(f"Your message is {echo_message_response.content}")
-else:
-    echo_message_response.raise_for_status()
-
-
-# TODO: script to load movie data into Data Store
-# TODO: script to create unit vectors per movie (tf-idf?) (don't bother with tf-idf, all tags have identical frequency)
-# TODO: cloud function trigger to add top 10/20 tags per movie
-# TODO: cloud function trigger to add movie poster URL
-# TODO: cloud function trigger to calculate movie similarity
-# TODO: cloud function for movie search
-# TODO: cloud function for movie GET
+st.write(f"Results {search_result}")
