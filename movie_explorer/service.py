@@ -28,7 +28,7 @@ def get_similar(movie_id: int,
         print("Similarity not cached. Calculating.")
         similar_movies_result = movie_explorer.similar_movies.get_similar([movie_id],
                                                                           tags_to_boost=tags_to_boost,
-                                                                          tags_to_penalise=tags_to_penalise)
+                                                                          tags_to_drop=tags_to_penalise)
         movie = repository.get_movie(movie_id)
         similar_movies = {repository.get_movie(other_movie_id): similarity_score
                           for other_movie_id, similarity_score in similar_movies_result[movie_id].items()}
