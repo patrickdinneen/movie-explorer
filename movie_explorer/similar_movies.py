@@ -14,12 +14,16 @@ lhs_unit_scores_cte_template = """
               SELECT
                 item_id,
                 tag,
+                {% if tags_to_boost %} 
                 CASE
-                  {% if tags_to_boost %} WHEN tag IN ({% for tag_to_boost in tags_to_boost %}
+                  WHEN tag IN ({% for tag_to_boost in tags_to_boost %}
                     $tag_to_boost_{{ loop.index0 }}{% if not loop.last %},{% endif %}{% endfor %}
-                  ) THEN 0.9 {% endif %} 
+                  ) THEN 0.9 
                   ELSE score
                 END as score
+                {% else %}
+                score
+                {% endif %} 
               FROM 'data/movie_tags.parquet'
               WHERE item_id = $lhs_id
               {% if tags_to_drop %} AND tag NOT IN ({% for t in tags_to_drop %}
@@ -45,7 +49,7 @@ lhs_unit_scores_cte_template = """
                 score,
                 score/SQRT(SUM(POW(score, 2)) OVER (PARTITION BY item_id)) as unit_score
               FROM lhs_movie_tags
-            ),            
+            )            
             {% else %}
             lhs_unit_scores AS (
               SELECT
@@ -89,18 +93,18 @@ similar_movies_query_template = """
 
 explain_similarity_query = """
         WITH 
-          {{ lhs_unit_scores_cte }}
+          {{ lhs_unit_scores_cte }},
+          rhs AS (
+            SELECT * FROM 'data/movie_tags.parquet' WHERE item_id = $rhs_id
+          )
           SELECT
-            rhs.tag,
+            COALESCE(rhs.tag, lhs.tag) as tag,
             lhs.score as lhs_tag_score,
             rhs.score as rhs_tag_score,
             lhs.unit_score * rhs.unit_score * 100 as tag_percentage
-          FROM 'data/movie_tags.parquet' rhs
-          LEFT JOIN lhs_unit_scores lhs ON lhs.tag = rhs.tag
-          LEFT JOIN 'data/movies.parquet' lhs_movie ON lhs.item_id = lhs_movie.item_id 
-          LEFT JOIN 'data/movies.parquet' rhs_movie ON rhs.item_id = rhs_movie.item_id 
-          WHERE rhs.item_id = $rhs_id              
-          ORDER BY tag_percentage DESC
+          FROM lhs_unit_scores lhs
+          FULL OUTER JOIN rhs ON lhs.tag = rhs.tag
+          ORDER BY tag_percentage DESC, lhs.score DESC
     """
 
 
@@ -112,7 +116,6 @@ def _get_lhs_unit_scores_cte(movie_id: int,
                                                         tags_to_drop=tags_to_drop)
 
 
-@cache
 def get_similar(movie_id: int,
                 number_of_results: int = 10,
                 tags_to_boost: Optional[List[str]] = None,
@@ -146,7 +149,6 @@ def get_similar(movie_id: int,
     return result
 
 
-@cache
 def explain_similarity(lhs_movie_id: int,
                        rhs_movie_id: int,
                        tags_to_boost: Optional[List[str]] = None,
@@ -159,8 +161,32 @@ def explain_similarity(lhs_movie_id: int,
       "rhs_id": rhs_movie_id
     }
 
+    if tags_to_boost:
+      for i, tag in enumerate(tags_to_boost):
+         query_parameters[f"tag_to_boost_{i}"] = tag
+
+    if tags_to_drop:
+      for i, tag in enumerate(tags_to_drop):
+         query_parameters[f"tag_to_drop_{i}"] = tag
+
+
     query = Template(explain_similarity_query).render(lhs_unit_scores_cte=lhs_unit_scores_cte)
 
     con = duckdb.connect(":default:")
     con.execute(query, query_parameters)
     return con.fetch_df()
+
+
+@cache
+def get_tags(movie_id: int) -> List[str]:
+    con = duckdb.connect(":default:")
+    con.execute("SELECT tag FROM 'data/movie_tags.parquet' WHERE item_id = ? ORDER BY tag", 
+                [movie_id])
+    return [row[0] for row in con.fetchall()]
+
+
+def search_tags(tag_query: str) -> List[str]:
+    con = duckdb.connect(":default:")
+    con.execute("SELECT DISTINCT tag FROM 'data/movie_tags.parquet' WHERE contains(lower(tag), ?) ORDER BY tag", 
+                [tag_query.lower()])
+    return [row[0] for row in con.fetchall()]

@@ -3,6 +3,7 @@ WITH ranked_tags AS (
     *,
     ROW_NUMBER() OVER (PARTITION BY item_id ORDER BY score DESC) as tag_rank
   FROM `$DATASET.movie_tags_view`
+  WHERE score > 0.6
 ),
 top_n_tags AS (
   SELECT 
