@@ -1,6 +1,6 @@
 SELECT
-  movie_id,
-  tag_id,
-  relevance,
-  relevance/SQRT(SUM(POW(relevance, 2)) OVER (PARTITION BY movie_id)) as unit_relevance
-FROM `movielens.genome_scores`
+  item_id,
+  tag,
+  score,
+  score/SQRT(SUM(POW(score, 2)) OVER (PARTITION BY item_id)) as unit_score
+FROM `$DATASET.movie_tags_view`
