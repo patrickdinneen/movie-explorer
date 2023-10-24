@@ -5,7 +5,7 @@ from dataclasses import dataclass
 class Movie:
     movie_id: int
     title: str
-    imdb_id: int | None = None
+    imdb_id: int
 
     def __repr__(self) -> str:
         return self.title
