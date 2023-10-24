@@ -1,7 +1,25 @@
 import streamlit as st
+from dataclasses import dataclass
 from streamlit_searchbox import st_searchbox
 from movie_explorer.model import Movie
 from movie_explorer import explorer
+
+@dataclass
+class ScoreQuality:
+    quality: str
+    text_colour: str
+
+    @classmethod
+    def get_score_quality(cls, score: float) -> "ScoreQuality":
+        if score > 65.0:
+            return ScoreQuality("Excellent", "rainbow")
+        elif score > 60.0:
+            return ScoreQuality("Strong", "green")
+        elif score > 50.0:
+            return ScoreQuality("Average", "orange")
+        else:
+            return ScoreQuality("Weak", "grey")
+
 
 st.title("Movie Explorer")
 
@@ -31,8 +49,10 @@ with app:
         for similar_movie, score in sorted(similar_movies.items(), 
                                         reverse=True, 
                                         key=lambda x: x[1]):
+            score_quality = ScoreQuality.get_score_quality(score)
             st.markdown(f"### {similar_movie.title}")
-            st.write(f"Similarity score: {score:.2f}")
+            st.markdown(f":{score_quality.text_colour}[Similarity score: {score:.2f}]")
+            st.markdown(f"Similarity strength: {score_quality.quality}")
             st.markdown(f"[IMDB]({similar_movie.get_imdb_url()})")
             with st.expander("Explain similarity score"):
                 st.write("""The table below shows the tags and tag scores for each movie.                        
