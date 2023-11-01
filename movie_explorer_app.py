@@ -20,13 +20,15 @@ class ScoreQuality:
         else:
             return ScoreQuality("Weak", "grey")
 
-
-st.title("Movie Explorer")
+main_help = """Search for a movie to see similar movies.
+            Fine-tune the results to discover movies that are more like _X_ and less like _Y_."""
+st.title("Movie Explorer", help=main_help)
 
 app, about = st.tabs(["App", "About"])
 
 with app:
     st.subheader("Find similar movies")
+    st.markdown("_Note: Only movies released before 2022_")
     movie: Movie = st_searchbox(search_function=explorer.search, 
                                 key="searchbox")
 
@@ -35,7 +37,8 @@ with app:
         st.header(movie.title)
         st.markdown(f"[IMDB]({movie.get_imdb_url()})")
 
-        with st.expander("Fine-tune Results"):
+        with st.expander("**Fine-tune Results**"):
+            st.markdown("For best results apply multiple changes")
             movie_tags = explorer.get_tags(movie.movie_id)
             tags_to_drop = st.multiselect("Less like", options=movie_tags)
             tags_not_present = [t for t in explorer.get_all_tags() if t not in movie_tags]
@@ -54,7 +57,7 @@ with app:
             st.markdown(f":{score_quality.text_colour}[Similarity score: {score:.2f}]")
             st.markdown(f"Similarity strength: {score_quality.quality}")
             st.markdown(f"[IMDB]({similar_movie.get_imdb_url()})")
-            with st.expander("Explain similarity score"):
+            with st.expander("*Explain similarity score*"):
                 st.write("""The table below shows the tags and tag scores for each movie.                        
                             The more tags movies share at similar tag scores, the higher the similarity.""")
                 similarity_df = explorer.explain_similarity(movie.movie_id,
