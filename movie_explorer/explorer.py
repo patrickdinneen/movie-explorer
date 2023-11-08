@@ -2,7 +2,7 @@ import duckdb
 import pandas as pd
 
 from functools import cache
-from typing import List, Dict, Optional
+from typing import List, Dict, Optional, Set
 
 from jinja2 import Template
 
@@ -14,28 +14,26 @@ lhs_unit_scores_cte_template = """
               SELECT
                 item_id,
                 tag,
-                {% if tags_to_boost %} 
                 CASE
+                  {% if tags_to_boost %} 
                   WHEN tag IN ({% for tag_to_boost in tags_to_boost %}
                     $tag_to_boost_{{ loop.index0 }}{% if not loop.last %},{% endif %}{% endfor %}
-                  ) THEN 0.9 
+                  ) THEN 1.0 
+                  {% endif %} 
+                  {% if tags_to_drop %} WHEN tag IN ({% for t in tags_to_drop %}
+                $tag_to_drop_{{ loop.index0 }}{% if not loop.last %},{% endif %}{% endfor %}
+                  ) THEN -1.0 {% endif %} 
                   ELSE score
                 END as score
-                {% else %}
-                score
-                {% endif %} 
               FROM 'data/movie_tags.parquet'
               WHERE item_id = $lhs_id
-              {% if tags_to_drop %} AND tag NOT IN ({% for t in tags_to_drop %}
-                $tag_to_drop_{{ loop.index0 }}{% if not loop.last %},{% endif %}{% endfor %}
-              ){% endif %} 
               {% if tags_to_boost %}
               UNION DISTINCT
               {% for tag in tags_to_boost %}
               SELECT
                 {{ movie_id }} as item_id,
                 '{{ tag }}' as tag,
-                0.9 as score
+                1.0 as score
               {% if not loop.last %}
               UNION DISTINCT
               {% endif %}
@@ -162,7 +160,6 @@ def search(search_string: str) -> List[Movie]:
       results = [Movie(row[0], row[1], row[2]) for row in con.fetchall()]
       return results
 
-
 def explain_similarity(lhs_movie_id: int,
                        rhs_movie_id: int,
                        tags_to_boost: Optional[List[str]] = None,
@@ -185,7 +182,6 @@ def explain_similarity(lhs_movie_id: int,
 
 
     query = Template(explain_similarity_query).render(lhs_unit_scores_cte=lhs_unit_scores_cte)
-
     with duckdb.connect(":memory:") as con:
       con.execute(query, query_parameters)
       return con.fetch_df()

@@ -47,8 +47,8 @@ with app:
         st.subheader("Similar Movies", divider="rainbow")
 
         similar_movies = explorer.get_similar(movie.movie_id,
-                                            tags_to_drop=tags_to_drop,
-                                            tags_to_boost=tags_to_boost)
+                                              tags_to_drop=tags_to_drop,
+                                              tags_to_boost=tags_to_boost)
         for similar_movie, score in sorted(similar_movies.items(), 
                                         reverse=True, 
                                         key=lambda x: x[1]):
